@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MyThread",
+            "request": "launch",
+            "mainClass": "MyThread"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - bai4",
+            "request": "launch",
+            "mainClass": "bai4"
+        }
+    ]
+}
