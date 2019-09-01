@@ -1,0 +1,40 @@
+/*
+Cho một mảng gồm n số nguyên dương a1, a2, a3, ... an.
+Hỏi có bao nhiêu cặp số bằng nhau? (Bao nhiêu cặp ai = aj với i ≠ j, (ai, aj) và (aj, ai) chỉ được tính là 1 cặp)
+Dữ liệu vào:
+- Dòng thứ nhất là chiều dài n của mảng (1<= n <= 105)
+- Dòng thứ hai gồm n số nguyên a1, a2, a3, ... an (1<= ai <= 105), mỗi số cách nhau một khoảng trắng.
+Dữ liệu ra:
+- Là số nguyên xác định số lượng các cặp bằng nhau, lưu ý là số lượng này có thể rất lớn nên sử dụng kiểu long long.
+*/
+#include<iostream>
+using namespace std;
+int a[100005]; // mảng này chỉ để nhập phần tử.
+int Temp[100005]; // Mảng này dùng để chưa các phần tử bằng nhau.
+//int max;// biến này dùng để so sánh chi để cho mảng sau khi xét ta chạy đến đây rồi dừng thôi. tiết kiệm dãy thuật.
+int main()
+{
+	int n;
+	int max = 0; // cái này để ngoài cũng được do visual báo lỗi sản
+	long long kq  = 0;
+	int x;
+	cin>>n;
+	for(int i = 0; i < n; i++)
+	{
+		cin>>x;
+		if(x>max) max = x;
+		Temp[x]++;
+	}
+	for(int i = 0; i <= max; i++)
+	{
+		if(Temp[i]>=2)
+		{
+			if(Temp[i]%2==0) kq+= (long long)Temp[i]*((Temp[i]-1)/2)+Temp[i]/2; // Chổ này phải ép kiểu mới được
+			//ans += (long long)(sl[i] / 2) * (sl[i] - 1);
+			else kq+= (long long)Temp[i]*((Temp[i]-1)/2);
+		}
+	}
+	cout<<kq;
+	system("pause");
+	return 0;
+}

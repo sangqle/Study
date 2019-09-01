@@ -1,0 +1,7 @@
+th{
+	background-color: red
+}
+
+td:hover{
+	background-color: blue
+}

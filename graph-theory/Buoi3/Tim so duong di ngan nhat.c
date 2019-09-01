@@ -1,0 +1,90 @@
+// Tim SO duong di ngan nhat 1 - n (nang cao)
+#include <stdio.h>
+
+#define MAXN 1000
+#define NO_EDGE 0
+#define INFINITY 9999999
+
+// Graph
+typedef struct {
+	int n;
+	int L[MAXN][MAXN];
+} Graph;
+
+void init_graph(Graph* G, int n) {
+	G->n = n;
+	
+	int i, j;	
+	for (i = 1; i <= n; ++i) {
+		for (j = 1; j <= n; ++j) {
+			G->L[i][j] =NO_EDGE;
+		}
+	}
+}
+
+void add_edge(Graph* G, int x, int y, int w) {
+    G->L[x][y] = w;
+}
+
+int mark[MAXN];
+int pi[MAXN];
+int p[MAXN];
+int cnt[MAXN];
+
+void Dijkstra(Graph* G, int s) {
+	int i, j, it;
+	for (i = 1; i <= G->n; ++i) {
+		pi[i] = INFINITY;
+		mark[i] = 0;
+		cnt[i] = 1;
+	}
+	
+	pi[s] = 0;
+	p[s] = -1;
+	
+	for (it = 1; it < G->n; ++it) {
+		int min_pi = INFINITY;
+		for (j = 1; j <= G->n; ++j) {
+			if (mark[j] == 0 && pi[j] < min_pi) {
+				min_pi = pi[j];
+				i = j;
+			}
+		}
+		
+		mark[i] = 1;
+		for (j = 1; j <= G->n; ++j) {
+			if (G->L[i][j] != NO_EDGE && mark[j] == 0) {
+				if (pi[i] + G->L[i][j] < pi[j]) {
+					pi[j] = pi[i] + G->L[i][j];
+					p[j] = i;
+					cnt[j] = cnt[i];
+				} else {
+				    if (pi[i] + G->L[i][j] == pi[j]) {
+				        cnt[j] += cnt[i];
+				    }
+				}
+			}
+		}
+	}
+}
+
+int main() {
+	Graph G;
+	int n, m, u, v, w, e;
+	scanf("%d%d", &n, &m);
+	init_graph(&G, n);
+	
+	for (e = 0; e < m; e++) {
+		scanf("%d%d%d", &u, &v, &w);
+		add_edge(&G, u, v, w);
+	}
+	
+	Dijkstra(&G, 1);
+	
+	if (pi[n] == INFINITY) {
+		printf("-1 0");
+	} else {
+		printf("%d %d", pi[n], cnt[n]);
+	}
+	return 0;
+}

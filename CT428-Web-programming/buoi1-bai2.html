@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <title>Lap trinh Web(CT428)</title>
+  <meta http-equiv="Conten-Type" content="text/html"; charset="UTF-8"/>
+  <body>
+  <!--bai 2-->
+	<div class="form-sign-in">
+		<h2>Đăng ký tài khoảng mới</h2>
+		<p>Vui lòng điền đầy đủ thông tin bên dưới</p>
+		<form action= "dangky.php" method="POST">
+			<p>Ten đăng nhập</p>
+				<input type="text" placeholder="Ten đăng nhập" name="tendangnhap"/>
+			<p>Mật Khẩu</p>
+				<input type="password" placeholder="Mật khẩu" name="matkhau"/>
+			<p>Gõ lại mật khẩu</p>
+				<input type="password" placeholder="Nhập lại mật khẩu"/>
+			<p>Hình ảnh đại diện</p>
+				<input type="file" name="hinhanh"/>
+			<p>Giới tính</p>
+				<input type="radio" name="gioitinh" value="nam"/>Nam<br>
+				<input type="radio" name="gioitinh" value="nu"/>Nữ<br>
+				<input type="radio" name="gioitinh" value="khac"/>Khác<br>
+			<p>Nghề nghiệp</p>
+				<select name="nghenghiep">
+					<option value="hocSinh">Hoc Sinh</option>
+					<option value="sinhVien">Sinh Vien</option>
+					<option value="giaoVien">Giao Vien</option>
+				</select>
+			<p>Sở Thích</p>
+				<input type="checkbox" name="sothich" value="eat"/>Eating
+				<input type="checkbox" name="sothich" value="code"/>Coding
+				<input type="checkbox" name="sothich" value="sleep"/>Sleeping
+				<input type="checkbox" name="sothich" value="Shoping"/>Shoping<br>
+				<input type="checkbox" name="sothich" value="Cafe"/>Cafe<br>
+			<button>Đăng ký</button>
+			<button>làm lại</button>
+		</form>
+		
+	</div>
+
+  </body>
+</html>

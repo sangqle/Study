@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Lập trình web (CT428)</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="title">
+        <h1>Bài 3 - Buổi 4</h1>
+      </div>
+      <!--end div title-->
+      <div id="menu">
+        <!-- chèn menu của sinh viên vào-->
+      </div>
+      <!--end div menu-->
+      <div id="content">
+        <!--Nội dung trang web-->
+        <h1>Quảng cáo</h1>
+
+        <a href="http://www.hp.com" target="_blank" id="link"
+          ><img
+            id="laptopImg"
+            name="laptopImg"
+            src="img/hp.jpg"
+            height="300"
+            width="300"
+            onmouseover="pauseTimer()"
+            onmouseout="activateTimer()"
+        /></a>
+
+        <p>
+          Yêu cầu:<br />
+          Có 4 hình ảnh của 4 công ty muốn quảng cáo đính kèm. Đầu tiên hiển thị
+          một hình, cứ 2 giây thì thay hình ảnh khác, xoay vòng giữa 4 hình ảnh
+          đã cho.<br />
+          Khi người dùng rê chuột lên hình nào thì hình đó dừng lại không thay
+          đổi để người dùng đọc thông tin về quảng cáo đó, khi nào người dùng rê
+          chuột khỏi thì 2 giây sau mới cho hiển thị hình tiếp theo.<br />
+          Khi người dùng click vào hình nào thì liên kết đến website của hình đó
+          ở cửa sổ mới.
+        </p>
+      </div>
+      <!--end div content-->
+      <div id="footer">
+        <p>
+          Họ tên SV: Le Quang Sang <br />
+          Email: sang.lequang94@gmail.com
+        </p>
+      </div>
+      <!--end div footer-->
+    </div>
+    <!--end div wrap-->
+  </body>
+
+  <script>
+    var IMAGE_PATHS = [];
+
+    IMAGE_PATHS[0] = "img/hp.jpg";
+    IMAGE_PATHS[1] = "img/dell.jpg";
+    IMAGE_PATHS[2] = "img/acer.jpg";
+    IMAGE_PATHS[3] = "img/asus.jpg";
+    var LINK = [];
+
+    LINK[0] = "http://www.hp.com";
+    LINK[1] = "http://www.dell.com";
+    LINK[2] = "http://www.acer.com.vn";
+    LINK[3] = "http://vn.asus.com";
+
+    var myVar = setInterval(showslide, 2000);
+
+    function activateTimer() {
+      myVar = setInterval(showslide, 2000);
+    }
+    var index = 0;
+
+    function showslide() {
+      index++;
+      if (index === 4) index = 0;
+      var img = document.getElementById("laptopImg");
+      img.setAttribute("src", IMAGE_PATHS[index]);
+    }
+
+    function pauseTimer() {
+      var a = document.getElementById("link");
+      a.href = LINK[index];
+      console.log(a.href);
+      clearInterval(myVar);
+    }
+  </script>
+</html>

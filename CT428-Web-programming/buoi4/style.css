@@ -1,0 +1,19 @@
+
+#menu > ul {
+    display: flex;
+    width: 100%;
+
+}
+
+#menu > ul > li {
+    flex: 1 1 100%;
+    background-color: aliceblue;
+}
+
+#menu > ul > li > ul > li {
+    display: none;
+}
+
+#menu > ul > li:hover >  ul > li {
+    display: block;
+}
