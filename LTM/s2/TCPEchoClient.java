@@ -5,7 +5,7 @@ import java.util.*;
 public class TCPEchoClient {
     public static void main(String args[]) {
         try {
-            Socket s = new Socket(args[0], 7);
+            Socket s = new Socket(args[0], 8080);
             InputStream is = s.getInputStream();
             OutputStream os = s.getOutputStream();
             while (true) {
