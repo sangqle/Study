@@ -3,7 +3,7 @@ import java.net.*;
 import java.util.*;
 
 public class STCPEchoServer {
-    public final static int defaultPort = 7;
+    public final static int defaultPort = 8080;
 
     public static void main(String args[]) {
         try {
