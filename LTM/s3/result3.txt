@@ -1,0 +1,32 @@
+// Bai 5
+>>> Run echo server
+$ java UDPEchoServer 8000
+Created UDP Socket...
+>>> Run echo client
+$ java UDPEchoClient 127.0.0.1 8000
+safd
+safd
+hello
+hello
+This is a message from client...
+This is a message from client...
+goodjob...
+goodjob...
+
+// Bai 6
+$ java TCPChatServer 8000 sang
+New client request received : Socket[addr=/127.0.0.1,port=47372,localport=8000]
+Creating a new handler for this client...
+thanh: Hello Sang
+thanh: Are you there???
+thanh: Help me....
+yepp. what happen??
+thanh: Some problem about socket connection
+
+$ java TCPChatClient 127.0.0.1 8000 thanh
+Hello Sang
+Are you there???
+Help me....
+sang: yepp. what happen??
+Some problem about socket connection
+
