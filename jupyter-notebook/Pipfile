@@ -6,6 +6,12 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+numpy = "*"
+seaborn = "*"
+sklearn = "*"
+jupyterlab = "*"
+pil = "*"
+image = "*"
 
 [requires]
 python_version = "3.6"
