@@ -1,0 +1,43 @@
+> telnet 172.18.54.56 25
+220 localhost ESMTP Postfix (Ubuntu)
+helo
+501 Syntax: HELO hostname
+helo server
+250 localhost
+mail from: user1
+250 2.1.0 Ok
+rcpt to: user2
+250 2.1.5 Ok
+data
+354 End data with <CR><LF>.<CR><LF>
+subject: No description....for testing
+Hom nay toi lam kiem tra hoc ky mon lap trinh truyen thong
+hiosdf
+hasdof
+hom nay toi buon nhe cac ban oi. tony buoi sang
+.
+250 2.0.0 Ok: queued as B89331E0D14
+quit
+221 2.0.0 Bye
+
+
+Connection to host lost.
+
+C:\Users\student>
+
+// bai 9
+D:\000sdfsdfsdfswerwesdafsd>java SMTPClient 172.18.54.56 25 user1 user2
+Server Response : 220 localhost ESMTP Postfix (Ubuntu)
+Server Response: 250 localhost
+Server Response: 250 2.1.0 Ok
+Server Response: 250 2.1.5 Ok
+subject:Lap trinh mang buoi4
+Server Response: 354 End data with <CR><LF>.<CR><LF>
+day la smtp client dung de gui mail
+moi thu co ve on chu???
+ok...
+.
+Server Response : 250 2.0.0 Ok: queued as 42AB81E0D6C
+
+D:\000sdfsdfsdfswerwesdafsd>
+
