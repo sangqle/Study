@@ -367,24 +367,12 @@ subject: Hom nay toi lam kiem tra hoc ky mon lap trinh truyen thong
 .
 
 ////////////// bai 11 ////////////////
+
 student@P07M17:~/sangb1606927/s5$ java POPClient 172.18.54.56 110 user2 puser2
 Server Response : +OK Dovecot (Ubuntu) ready.
 Server Response : +OK
 Server Response: +OK Logged in.
-Enter message no, 0 for the end: 
-0
-+OK 322 91214
-+OK 260 octets
-Return-Path: <user1@localhost>
-X-Original-To: user2
-Delivered-To: user2@localhost
-Received: from user1 (wifi-gw5-out.ctu.edu.vn [172.18.72.5])
-	by localhost (Postfix) with SMTP id 70CC41E0D2A
-	for <user2>; Fri, 25 Oct 2019 07:36:17 +0700 (+07)
-
-HELLO 
-.
-Enter message no, 0 for the end: 
+Enter message no: <number>, '0' for the end, 'inbox' for the last email: 
 1
 +OK 341 octets
 Return-Path: <"user1"@localhost>
@@ -398,7 +386,7 @@ from: user1
 to: user2
 subject: Hom nay toi lam kiem tra hoc ky mon lap trinh truyen thong
 .
-Enter message no, 0 for the end: 
+Enter message no: <number>, '0' for the end, 'inbox' for the last email: 
 2
 +OK 348 octets
 Return-Path: <user1@localhost>
@@ -413,23 +401,20 @@ subject: bai thuc hanh
 
 Hom nay toi lam kiem tra hoc ky mon lap trinh truyen thong
 .
-Enter message no, 0 for the end: 
-5656
--ERR There's no message 5656.
-Enter message no, 0 for the end: 
-0
-+OK 322 91214
-+OK 260 octets
+Enter message no: <number>, '0' for the end, 'inbox' for the last email: 
+inbox
++OK 325 92043
++OK 245 octets
 Return-Path: <user1@localhost>
 X-Original-To: user2
 Delivered-To: user2@localhost
-Received: from user1 (wifi-gw5-out.ctu.edu.vn [172.18.72.5])
-	by localhost (Postfix) with SMTP id 70CC41E0D2A
-	for <user2>; Fri, 25 Oct 2019 07:36:17 +0700 (+07)
+Received: from server (unknown [172.30.102.20])
+	by localhost (Postfix) with SMTP id 18C351E0D2B
+	for <user2>; Fri, 25 Oct 2019 08:13:36 +0700 (+07)
 
-HELLO 
-.
-Enter message no, 0 for the end: 
 QUIT
+.
+Enter message no: <number>, '0' for the end, 'inbox' for the last email: 
+0
 Server Response : +OK Logging out.
 

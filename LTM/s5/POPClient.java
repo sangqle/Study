@@ -35,17 +35,17 @@ public class POPClient {
              // recive a email with number
              String noMail = "1";
 			 while(true) {
-                System.out.println("Enter message no, 0 for the end: ");
+                System.out.println("Enter message no: <number>, '0' for the end, 'inbox' for the last email: ");
 				noMail = keyboard.readLine();
                 
-                if(noMail.equals("QUIT")) {
+                if(noMail.equals("0")) {
                     pw.println("QUIT");
 
 					pw.flush();
 					break;
                 }
 
-                if(noMail.equals("0")) {
+                if(noMail.equals("inbox")) {
                     pw.println("stat");
                     pw.flush();
                     dataRecive = brPop3ServerSocket.readLine();
