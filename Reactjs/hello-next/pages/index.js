@@ -1,9 +1,7 @@
-import Layout from "../components/MyLayout";
+import Layout from "../components/MyLayout.js";
+
+const indexPageContent = <p>Hello Next.js</p>;
 
 export default function Index() {
-  return (
-    <Layout>
-      <p>Hello Next.js</p>
-    </Layout>
-  );
+  return <Layout content={indexPageContent} />;
 }
