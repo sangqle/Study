@@ -1,12 +1,10 @@
-console.log("hello react");
+"use strict";
 
 var template = React.createElement(
-  "p",
-  {
-    id: "someid"
-  },
-  "Hello React.js"
+  "h1",
+  null,
+  "Indecision App"
 );
 var appRoot = document.getElementById("app");
 
-ReactDom.render(template, appRoot);
+ReactDOM.render(template, appRoot);
