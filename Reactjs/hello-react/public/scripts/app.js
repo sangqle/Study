@@ -1,19 +1,22 @@
 "use strict";
 
 console.log("app.js is running");
-
+var app = {
+  title: "Some title",
+  subtitle: "this is subtitle"
+};
 var template = React.createElement(
   "div",
   null,
   React.createElement(
     "h1",
     null,
-    "Indecision App"
+    app.title
   ),
   React.createElement(
     "p",
     null,
-    "Hello this is p tag"
+    app.subtitle
   ),
   React.createElement(
     "ol",
@@ -30,6 +33,14 @@ var template = React.createElement(
     )
   )
 );
+var user = {
+  userName: "Sang",
+  userAge: 22,
+  userLocation: "CanTho"
+};
+var userName = "Sang";
+var userAge = 22;
+var userLocation = "CanTho";
 
 var templateTwo = React.createElement(
   "div",
@@ -37,19 +48,21 @@ var templateTwo = React.createElement(
   React.createElement(
     "h1",
     null,
-    "Sangle"
+    user.userName
   ),
   React.createElement(
     "p",
     null,
-    "Age: 22"
+    "Age: ",
+    user.userAge
   ),
   React.createElement(
     "p",
     null,
-    "Location: CanTho"
+    "Location: ",
+    user.userLocation
   )
 );
 var appRoot = document.getElementById("app");
 
-ReactDOM.render(templateTwo, appRoot);
+ReactDOM.render(template, appRoot);
