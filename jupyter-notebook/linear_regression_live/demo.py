@@ -2,7 +2,7 @@ from numpy import *
 
 def gradient_descent_runner(points, starting_b, starting_m, learning_rate, num_interatinos):
   b = starting_b
-  m = starting_m
+  m = starting_m 
 
 def run():
     points = genfromtext('data.csv', delimiter=',')
