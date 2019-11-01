@@ -1,0 +1,43 @@
+# Bai 1
+D:\aaaaasdfds>rmic PT1
+D:\aaaaasdfds>start rmiregistry
+D:\aaaaasdfds>java -Djava.security.policy=file://D:/aaaaasdfds/policy.java PT1_S
+erver
+Tao object cho phep goi tu xa
+Dang ky thanh cong doi tuong
+
+D:\aaaaasdfds>java PT1_Client 172.30.102.27 PT1Object
+Nhap vao a: 1
+Nhap vao b: 2
+ket qua: x = -2.0
+
+D:\aaaaasdfds>java PT1_Client 172.30.102.27 PT1Object
+Nhap vao a: 0
+Nhap vao b: 0
+ket qua: x = 0
+
+D:\aaaaasdfds>java PT1_Client 172.30.102.27 PT1Object
+Nhap vao a: 1
+Nhap vao b: 0
+ket qua: x = 0
+
+D:\aaaaasdfds>java PT1_Client 172.30.102.27 PT1Object
+Nhap vao a: 0
+Nhap vao b: 1
+ket qua: Pt vo nghiem
+
+// bai 2
+
+
+D:\aaaaasdfds>java PT1_Client 172.30.102.27
+Option 1 for giaPT1, 2 for KyVong and 0 for the end: 1
+Nhap vao a: 1
+Nhap vao b: 3
+ket qua: x = -3.0
+Option 1 for giaPT1, 2 for KyVong and 0 for the end: 2
+Nhap vao so pt day so a: 3
+1
+2
+3
+ket qua: E = 2.0, A = 6.0
+Option 1 for giaPT1, 2 for KyVong and 0 for the end: 0
