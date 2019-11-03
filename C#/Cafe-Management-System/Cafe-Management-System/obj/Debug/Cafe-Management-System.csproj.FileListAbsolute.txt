@@ -7,3 +7,4 @@ C:\Users\lqsang\Desktop\Study\C#\Cafe-Management-System\Cafe-Management-System\o
 C:\Users\lqsang\Desktop\Study\C#\Cafe-Management-System\Cafe-Management-System\obj\Debug\Cafe-Management-System.exe
 C:\Users\lqsang\Desktop\Study\C#\Cafe-Management-System\Cafe-Management-System\obj\Debug\Cafe-Management-System.pdb
 C:\Users\lqsang\Desktop\Study\C#\Cafe-Management-System\Cafe-Management-System\obj\Debug\Cafe_Management_System.fLogin.resources
+C:\Users\lqsang\Desktop\Study\C#\Cafe-Management-System\Cafe-Management-System\obj\Debug\Cafe_Management_System.fTableManager.resources
