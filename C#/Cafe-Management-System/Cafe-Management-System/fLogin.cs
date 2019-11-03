@@ -46,5 +46,31 @@ namespace Cafe_Management_System
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void fLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(MessageBox.Show("Ban có thật sự thoát chương trình.","Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            fTableManager f = new fTableManager();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }
