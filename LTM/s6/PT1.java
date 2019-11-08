@@ -25,4 +25,15 @@ public class PT1 extends UnicastRemoteObject implements PT1_Itf {
 		Aa = sum;
 		return "E = " + Float.toString(Ea) + ", " + "A = " + Float.toString(Aa);
 	}
+	public float[][] NhanMatran(float[][] a, float[][] b) {
+		float[][] c = new float[a.length][b[0].length];
+		for(int i = 0; i < a.length; i++) {
+			for(int j = 0; j < a[i].length; j++) {
+				for(int t = 0; t < b[j].length; t++) {
+					c[i][t] += a[i][j] * b[j][t]; 
+				}
+			}
+		}
+		return c;
+	}
 }

@@ -1,0 +1,10 @@
+C:\Users\lqsang\Desktop\Study\C#\Cafe-Management-System\Cafe-Management-System\bin\Debug\Cafe-Management-System.exe.config
+C:\Users\lqsang\Desktop\Study\C#\Cafe-Management-System\Cafe-Management-System\bin\Debug\Cafe-Management-System.exe
+C:\Users\lqsang\Desktop\Study\C#\Cafe-Management-System\Cafe-Management-System\bin\Debug\Cafe-Management-System.pdb
+C:\Users\lqsang\Desktop\Study\C#\Cafe-Management-System\Cafe-Management-System\obj\Debug\Cafe-Management-System.csprojResolveAssemblyReference.cache
+C:\Users\lqsang\Desktop\Study\C#\Cafe-Management-System\Cafe-Management-System\obj\Debug\Cafe_Management_System.Properties.Resources.resources
+C:\Users\lqsang\Desktop\Study\C#\Cafe-Management-System\Cafe-Management-System\obj\Debug\Cafe-Management-System.csproj.GenerateResource.Cache
+C:\Users\lqsang\Desktop\Study\C#\Cafe-Management-System\Cafe-Management-System\obj\Debug\Cafe-Management-System.exe
+C:\Users\lqsang\Desktop\Study\C#\Cafe-Management-System\Cafe-Management-System\obj\Debug\Cafe-Management-System.pdb
+C:\Users\lqsang\Desktop\Study\C#\Cafe-Management-System\Cafe-Management-System\obj\Debug\Cafe_Management_System.fLogin.resources
+C:\Users\lqsang\Desktop\Study\C#\Cafe-Management-System\Cafe-Management-System\obj\Debug\Cafe_Management_System.fTableManager.resources
