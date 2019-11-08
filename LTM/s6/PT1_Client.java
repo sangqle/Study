@@ -3,6 +3,23 @@ import java.net.MalformedURLException;
 import java.util.Scanner;
 
 public class PT1_Client {
+	static void input(float[][] a, int m, int n) {
+		Scanner sc = new Scanner(System.in);
+		for(int i = 0; i < m; i++) {
+			for(int j = 0; j < n; j++) {
+				a[i][j] = sc.nextFloat();
+			}
+			System.out.println();
+		}
+	}
+	static void output(float[][] c) {
+		for(int i = 0; i < c.length; i++) {
+			for(int j = 0; j < c[i].length; j++) {
+				System.out.print(c[i][j] + " ");
+			}
+			System.out.println();
+		}
+	}
 	public static void main(String[] args) {
 		try {
 			// Do tim doi tuong
@@ -14,7 +31,7 @@ public class PT1_Client {
 			Scanner sc = new Scanner(System.in);
 			while(true) {
 				int option;
-				System.out.print("Option 1 for giaPT1, 2 for KyVong and 0 for the end: ");
+				System.out.print("Option 1 for giaPT1, 2 for KyVong, 3 for multiply matrix and 0 for the end: ");
 				option = sc.nextInt();
 				if(option == 0) return;
 				else if(option == 1) {
@@ -33,6 +50,31 @@ public class PT1_Client {
 					}
 					String result1 = ref.KyVong(dayA);
 					System.out.println("ket qua: " + result1);
+				} else if(option == 3) {
+					int m, n;
+					System.out.println("Nhap vao matran A: ");
+					System.out.println("Nhap vao so hang (m) cua matran A: ");
+					m = sc.nextInt();
+					System.out.println("Nhap vao so cot (n) cua matran A: ");
+					n = sc.nextInt();
+					System.out.println(">>>");
+					
+					float[][] aMatrix = new float[m][n];
+					input(aMatrix, m, n);
+					
+					System.out.println("Nhap vao matran B: ");
+					System.out.println("Nhap vao so hang (m) cua matran B: ");
+					m = sc.nextInt();
+					System.out.println("Nhap vao so cot (n) cua matran B: ");
+					n = sc.nextInt();
+					System.out.println(">>>");
+					
+					float[][] bMatrix = new float[m][n];
+					input(bMatrix, m, n);
+					float[][] cMatrix = ref.NhanMatran(aMatrix, bMatrix);
+					System.out.println("ket qua: ");
+					output(cMatrix);
+					
 				}
 			}	
 			

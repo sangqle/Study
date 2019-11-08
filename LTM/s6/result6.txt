@@ -28,6 +28,10 @@ ket qua: Pt vo nghiem
 
 // bai 2
 
+D:\aaisdfdsfss>javac PT1.java PT1_Client.java PT1_Itf.java PT1_Server.java
+D:\aaisdfdsfss>rmic PT1
+D:\aaisdfdsfss>java -Djava.security.policy=file://D:/aaisdfdsfss/policy.java PT1
+_Server
 
 D:\aaaaasdfds>java PT1_Client 172.30.102.27
 Option 1 for giaPT1, 2 for KyVong and 0 for the end: 1
@@ -41,3 +45,33 @@ Nhap vao so pt day so a: 3
 3
 ket qua: E = 2.0, A = 6.0
 Option 1 for giaPT1, 2 for KyVong and 0 for the end: 0
+
+// bai 2 tt
+D:\aaisdfdsfss>java PT1_Client 172.30.102.27
+Option 1 for giaPT1, 2 for KyVong, 3 for multiply matrix and 0 for the end: 3
+Nhap vao matran A:
+Nhap vao so hang (m) cua matran A:
+2
+Nhap vao so cot (n) cua matran A:
+3
+>>>
+1 2 3
+
+4 5 6
+
+Nhap vao matran B:
+Nhap vao so hang (m) cua matran B:
+3
+Nhap vao so cot (n) cua matran B:
+2
+>>>
+7 8
+
+9 10
+
+11 12
+
+ket qua:
+58.0 64.0
+139.0 154.0
+Option 1 for giaPT1, 2 for KyVong, 3 for multiply matrix and 0 for the end: 0
