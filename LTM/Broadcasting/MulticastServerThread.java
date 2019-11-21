@@ -3,12 +3,11 @@ import java.net.*;
 import java.util.*;
 import java.lang.*;
 
-public class MulticastServerThread extends QuoteServerThread {
-
-  private long FIVE_SECONDS = 5000;
+public class MulticastServerThread extends Thread {
+  private DatagramSocket socket = null;
 
   public MulticastServerThread() throws IOException {
-    super("MulticastServerThread");
+    this.socket = new DatagramSocket(4445);
   }
 
   public void run() {
