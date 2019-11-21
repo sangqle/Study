@@ -12,8 +12,6 @@ public class TCPChatClient {
 			}
 			String userName = args[2];
 			Socket s = new Socket(args[0], Integer.parseInt(args[1]));
-			InputStream is = s.getInputStream();
-			OutputStream os = s.getOutputStream();
 
 			BufferedReader br = new BufferedReader(new InputStreamReader(s.getInputStream()));
 			PrintWriter pw = new PrintWriter(s.getOutputStream());
