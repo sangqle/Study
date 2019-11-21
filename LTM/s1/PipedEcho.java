@@ -1,4 +1,5 @@
 import java.io.*;
+
 public class PipedEcho {
     public static void main(String argv[]) {
         try {
@@ -8,8 +9,8 @@ public class PipedEcho {
             PipedInputStream srPipe = new PipedInputStream(cwPipe);
             PipedEchoServer server = new PipedEchoServer(srPipe, swPipe);
             PipedEchoClient client = new PipedEchoClient(crPipe, cwPipe);
-        } catch(IOException ie) {
+        } catch (IOException ie) {
             System.out.println("Echo server Error: " + ie);
         }
-    }  
+    }
 }

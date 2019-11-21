@@ -27,6 +27,10 @@ public class MyThread extends Thread {
     }
 
     public static void main(String args[]) {
+        if (args.length < 1) {
+            System.out.println("Error: Usage n for number of threads.");
+            return;
+        }
         int nThread = Integer.parseInt(args[0]);
         for (int i = 1; i <= nThread; i++) {
             MyThread th = new MyThread(i);

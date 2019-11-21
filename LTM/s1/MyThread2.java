@@ -24,17 +24,20 @@ class MyThread2 implements Runnable {
             System.out.println("Loi khi truy xuat file.");
         }
 
-       
-      }
-      public static void main(String args[]) {
+    }
+
+    public static void main(String args[]) {
+        if (args.length < 1) {
+            System.out.println("Error: Usage n for number of threads.");
+            return;
+        }
         int nThread = Integer.parseInt(args[0]);
         for (int i = 1; i <= nThread; i++) {
             MyThread2 th2 = new MyThread2(i);
-	    Thread th = new Thread(th2);		
+            Thread th = new Thread(th2);
             th.start();
         }
 
     }
 
 }
-
