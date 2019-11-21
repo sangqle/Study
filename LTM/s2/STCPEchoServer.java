@@ -9,17 +9,19 @@ public class STCPEchoServer {
         try {
             ServerSocket ss = new ServerSocket(8080);
             System.out.println("server socket is running");
+
             while (true) {
                 Socket s = ss.accept();
-                OutputStream os = s.getOutputStream();
-                InputStream is = s.getInputStream();
-                int ch = 0;
+                PrintWriter pw = new PrintWriter(s.getOutputStream());
+                BufferedReader brServerSocket = new BufferedReader(new InputStreamReader(s.getInputStream()));
+                String dataInput;
+
                 while (true) {
-                    ch = is.read();
-                    if (ch == -1)
+                    dataInput = brServerSocket.readLine();
+                    pw.println(dataInput);
+                    pw.flush();
+                    if (dataInput.equals("quit"))
                         break;
-                    System.out.print((char) ch);
-                    os.write(ch);
                 }
                 s.close();
 

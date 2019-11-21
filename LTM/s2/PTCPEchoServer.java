@@ -10,16 +10,16 @@ public class PTCPEchoServer {
             ServerSocket ss = new ServerSocket(defaultPort);
             System.out.println("server socket is running");
             while (true) {
-		try {
-		    Socket s = ss.accept();
-		    // Tao xu ly
-		    RequestProcessing rq = new RequestProcessing(s);
-		    rq.start();
-		} catch(IOException e) {
-			System.out.println("connection Error: " + e);
-		}
-		
-		}
+                try {
+                    Socket s = ss.accept();
+                    // Tao xu ly
+                    RequestProcessing rq = new RequestProcessing(s);
+                    rq.start();
+                } catch (IOException e) {
+                    System.out.println("connection Error: " + e);
+                }
+
+            }
         } catch (Exception e) {
             System.out.println("Creat Socket Error: " + e);
         }
