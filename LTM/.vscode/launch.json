@@ -1,0 +1,11 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - MyThread2",
+      "request": "launch",
+      "mainClass": "MyThread2",
+      "projectName": "LTM_932913df"
+    }
+  ]
+}
