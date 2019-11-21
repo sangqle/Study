@@ -20,7 +20,9 @@ public class STCPEchoServer {
                     dataInput = brServerSocket.readLine();
                     pw.println(dataInput);
                     pw.flush();
-                    if (dataInput.equals("quit"))
+
+                    // Check Ctrl + C and typing "quit" to quit out program
+                    if (dataInput == null || dataInput.equals("quit"))
                         break;
                 }
                 s.close();
