@@ -1,0 +1,9 @@
+C:\Users\lqsang\Desktop\Study\C# Winform\TinhTienDien\TinhTienDien\bin\Debug\TinhTienDien.exe.config
+C:\Users\lqsang\Desktop\Study\C# Winform\TinhTienDien\TinhTienDien\bin\Debug\TinhTienDien.exe
+C:\Users\lqsang\Desktop\Study\C# Winform\TinhTienDien\TinhTienDien\bin\Debug\TinhTienDien.pdb
+C:\Users\lqsang\Desktop\Study\C# Winform\TinhTienDien\TinhTienDien\obj\Debug\TinhTienDien.csprojResolveAssemblyReference.cache
+C:\Users\lqsang\Desktop\Study\C# Winform\TinhTienDien\TinhTienDien\obj\Debug\TinhTienDien.Form1.resources
+C:\Users\lqsang\Desktop\Study\C# Winform\TinhTienDien\TinhTienDien\obj\Debug\TinhTienDien.Properties.Resources.resources
+C:\Users\lqsang\Desktop\Study\C# Winform\TinhTienDien\TinhTienDien\obj\Debug\TinhTienDien.csproj.GenerateResource.Cache
+C:\Users\lqsang\Desktop\Study\C# Winform\TinhTienDien\TinhTienDien\obj\Debug\TinhTienDien.exe
+C:\Users\lqsang\Desktop\Study\C# Winform\TinhTienDien\TinhTienDien\obj\Debug\TinhTienDien.pdb

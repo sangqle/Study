@@ -1,0 +1,10 @@
+C:\Users\Student\Desktop\s3-form\s3-form\bin\Debug\s3-form.exe.config
+C:\Users\Student\Desktop\s3-form\s3-form\bin\Debug\s3-form.exe
+C:\Users\Student\Desktop\s3-form\s3-form\bin\Debug\s3-form.pdb
+C:\Users\Student\Desktop\s3-form\s3-form\obj\Debug\s3-form.csprojResolveAssemblyReference.cache
+C:\Users\Student\Desktop\s3-form\s3-form\obj\Debug\s3_form.Properties.Resources.resources
+C:\Users\Student\Desktop\s3-form\s3-form\obj\Debug\s3-form.csproj.GenerateResource.Cache
+C:\Users\Student\Desktop\s3-form\s3-form\obj\Debug\s3-form.exe
+C:\Users\Student\Desktop\s3-form\s3-form\obj\Debug\s3-form.pdb
+C:\Users\Student\Desktop\s3-form\s3-form\obj\Debug\s3_form.Form1.resources
+C:\Users\Student\Desktop\s3-form\s3-form\obj\Debug\s3_form.dashBoard.resources
