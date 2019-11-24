@@ -1,0 +1,10 @@
+C:\Users\lqsang\Desktop\Study\C# Winform\Demau2_TinhTienDien\Demau2_TinhTienDien\bin\Debug\Demau2_TinhTienDien.exe.config
+C:\Users\lqsang\Desktop\Study\C# Winform\Demau2_TinhTienDien\Demau2_TinhTienDien\bin\Debug\Demau2_TinhTienDien.exe
+C:\Users\lqsang\Desktop\Study\C# Winform\Demau2_TinhTienDien\Demau2_TinhTienDien\bin\Debug\Demau2_TinhTienDien.pdb
+C:\Users\lqsang\Desktop\Study\C# Winform\Demau2_TinhTienDien\Demau2_TinhTienDien\bin\Debug\Demau2_TinhTienDien.xml
+C:\Users\lqsang\Desktop\Study\C# Winform\Demau2_TinhTienDien\Demau2_TinhTienDien\obj\Debug\Demau2_TinhTienDien.Resources.resources
+C:\Users\lqsang\Desktop\Study\C# Winform\Demau2_TinhTienDien\Demau2_TinhTienDien\obj\Debug\Demau2_TinhTienDien.vbproj.GenerateResource.Cache
+C:\Users\lqsang\Desktop\Study\C# Winform\Demau2_TinhTienDien\Demau2_TinhTienDien\obj\Debug\Demau2_TinhTienDien.exe
+C:\Users\lqsang\Desktop\Study\C# Winform\Demau2_TinhTienDien\Demau2_TinhTienDien\obj\Debug\Demau2_TinhTienDien.xml
+C:\Users\lqsang\Desktop\Study\C# Winform\Demau2_TinhTienDien\Demau2_TinhTienDien\obj\Debug\Demau2_TinhTienDien.pdb
+C:\Users\lqsang\Desktop\Study\C# Winform\Demau2_TinhTienDien\Demau2_TinhTienDien\obj\Debug\Demau2_TinhTienDien.Form1.resources
