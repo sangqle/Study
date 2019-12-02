@@ -17,18 +17,6 @@ namespace QuanLyQuanCafe
         public fAdmin()
         {
             InitializeComponent();
-
-            LoadAccountList();
-        }
-
-        void LoadAccountList()
-        {
-
-            string query = "EXEC dbo.USP_GetAccountByUserName @userName";
-
-            DataProvider provider = new DataProvider();
-
-            dtgvAccount.DataSource = provider.ExecuteQuery(query, new object[] { "staff" });
         }
     }
 }
