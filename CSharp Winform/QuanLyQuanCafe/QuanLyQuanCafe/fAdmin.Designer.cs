@@ -940,7 +940,7 @@
             this.Name = "fAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
-            //this.Load += new System.EventHandler(this.fAdmin_Load);
+            this.Load += new System.EventHandler(this.fAdmin_Load);
             this.tcAdmin.ResumeLayout(false);
             this.tpBill.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

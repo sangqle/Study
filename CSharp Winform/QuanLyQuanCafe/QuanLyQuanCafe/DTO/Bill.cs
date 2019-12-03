@@ -9,13 +9,12 @@ namespace QuanLyQuanCafe.DTO
 {
     public class Bill
     {
-        public Bill(int id, DateTime? dateCheckin, DateTime? dateCheckOut, int status, int discount = 0)
+        public Bill(int id, DateTime? dateCheckin, DateTime? dateCheckOut, int status)
         {
             this.ID = id;
             this.DateCheckIn = dateCheckin;
             this.DateCheckOut = dateCheckOut;
             this.Status = status;
-            this.Discount = discount;
         }
 
         public Bill(DataRow row)
@@ -29,17 +28,8 @@ namespace QuanLyQuanCafe.DTO
 
             this.Status = (int)row["status"];
 
-            if (row["discount"].ToString() != "")
-                this.Discount = (int)row["discount"];
         }
 
-        private int discount;
-
-        public int Discount
-        {
-            get { return discount; }
-            set { discount = value; }
-        }
 
         private int status;
 
