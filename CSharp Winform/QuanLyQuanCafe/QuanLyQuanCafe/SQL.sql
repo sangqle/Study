@@ -305,6 +305,7 @@ GO
 DELETE dbo.BillInfo
 
 DELETE dbo.Bill
+GO
 
 CREATE TRIGGER UTG_UpdateBillInfo
 ON dbo.BillInfo FOR INSERT, UPDATE
