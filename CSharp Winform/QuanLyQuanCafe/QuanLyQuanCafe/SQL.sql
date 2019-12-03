@@ -322,7 +322,45 @@ BEGIN
 	UPDATE dbo.TableFood SET status = N'Có người' WHERE id = @idTable
 END
 GO
+-- update bill info
+ALTER TRIGGER UTG_UpdateBillInfo
+ON dbo.BillInfo FOR INSERT, UPDATE
+AS
+BEGIN
+	DECLARE @idBill INT
+	
+	SELECT @idBill = idBill FROM Inserted
+	
+	DECLARE @idTable INT
+	
+	SELECT @idTable = idTable FROM dbo.Bill WHERE id = @idBill AND status = 0	
+	
+	DECLARE @count INT
+	SELECT @count = COUNT(*) FROM dbo.BillInfo WHERE idBill = @idBill
+	
+	IF (@count > 0)
+	BEGIN
+	
+		PRINT @idTable
+		PRINT @idBill
+		PRINT @count
+		
+		UPDATE dbo.TableFood SET status = N'Có người' WHERE id = @idTable		
+		
+	END		
+	ELSE
+	BEGIN
+	PRINT @idTable
+		PRINT @idBill
+		PRINT @count
+	UPDATE dbo.TableFood SET status = N'Trống' WHERE id = @idTable	
+	end
+	
+END
+GO
 
+
+---------------
 CREATE TRIGGER UTG_UpdateBill
 ON dbo.Bill FOR UPDATE
 AS
@@ -341,5 +379,95 @@ BEGIN
 	
 	IF (@count = 0)
 		UPDATE dbo.TableFood SET status = N'Trống' WHERE id = @idTable
+END
+GO
+
+ALTER TABLE dbo.Bill
+ADD discount INT
+
+update dbo.bill set discount = 0;
+
+GO
+-- create triger switch table
+CREATE PROC USP_SwitchTabel
+@idTable1 INT, @idTable2 int
+AS BEGIN
+
+	DECLARE @idFirstBill int
+	DECLARE @idSeconrdBill INT
+	
+	DECLARE @isFirstTablEmty INT = 1
+	DECLARE @isSecondTablEmty INT = 1
+	
+	
+	SELECT @idSeconrdBill = id FROM dbo.Bill WHERE idTable = @idTable2 AND status = 0
+	SELECT @idFirstBill = id FROM dbo.Bill WHERE idTable = @idTable1 AND status = 0
+	
+	PRINT @idFirstBill
+	PRINT @idSeconrdBill
+	PRINT '-----------'
+	
+	IF (@idFirstBill IS NULL)
+	BEGIN
+		PRINT '0000001'
+		INSERT dbo.Bill
+		        ( DateCheckIn ,
+		          DateCheckOut ,
+		          idTable ,
+		          status
+		        )
+		VALUES  ( GETDATE() , -- DateCheckIn - date
+		          NULL , -- DateCheckOut - date
+		          @idTable1 , -- idTable - int
+		          0  -- status - int
+		        )
+		        
+		SELECT @idFirstBill = MAX(id) FROM dbo.Bill WHERE idTable = @idTable1 AND status = 0
+		
+	END
+	
+	SELECT @isFirstTablEmty = COUNT(*) FROM dbo.BillInfo WHERE idBill = @idFirstBill
+	
+	PRINT @idFirstBill
+	PRINT @idSeconrdBill
+	PRINT '-----------'
+	
+	IF (@idSeconrdBill IS NULL)
+	BEGIN
+		PRINT '0000002'
+		INSERT dbo.Bill
+		        ( DateCheckIn ,
+		          DateCheckOut ,
+		          idTable ,
+		          status
+		        )
+		VALUES  ( GETDATE() , -- DateCheckIn - date
+		          NULL , -- DateCheckOut - date
+		          @idTable2 , -- idTable - int
+		          0  -- status - int
+		        )
+		SELECT @idSeconrdBill = MAX(id) FROM dbo.Bill WHERE idTable = @idTable2 AND status = 0
+		
+	END
+	
+	SELECT @isSecondTablEmty = COUNT(*) FROM dbo.BillInfo WHERE idBill = @idSeconrdBill
+	
+	PRINT @idFirstBill
+	PRINT @idSeconrdBill
+	PRINT '-----------'
+
+	SELECT id INTO IDBillInfoTable FROM dbo.BillInfo WHERE idBill = @idSeconrdBill
+	
+	UPDATE dbo.BillInfo SET idBill = @idSeconrdBill WHERE idBill = @idFirstBill
+	
+	UPDATE dbo.BillInfo SET idBill = @idFirstBill WHERE id IN (SELECT * FROM IDBillInfoTable)
+	
+	DROP TABLE IDBillInfoTable
+	
+	IF (@isFirstTablEmty = 0)
+		UPDATE dbo.TableFood SET status = N'Trống' WHERE id = @idTable2
+		
+	IF (@isSecondTablEmty= 0)
+		UPDATE dbo.TableFood SET status = N'Trống' WHERE id = @idTable1
 END
 GO
