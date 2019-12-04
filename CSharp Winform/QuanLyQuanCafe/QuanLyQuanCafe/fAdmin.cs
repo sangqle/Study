@@ -32,6 +32,7 @@ namespace QuanLyQuanCafe
             AddCategoryBinding();
             AddTableBiding();
             AddAccountBinding();
+            LoadCategoryIntoCombobox(cbFoodCategory);
         }
 
         private void fAdmin_Load(object sender, EventArgs e)
@@ -62,6 +63,15 @@ namespace QuanLyQuanCafe
         void AddFoodBinding()
         {
             txbFoodName.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "Name"));
+            txbFoodID.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "ID"));
+            nmFoodPrice.DataBindings.Add(new Binding("Value", dtgvFood.DataSource, "Price"));
+
+        }
+
+        void LoadCategoryIntoCombobox(ComboBox cb)
+        {
+            cb.DataSource = CategoryDAO.Instance.GetListCategories();
+            cb.DisplayMember = "Name";
         }
 
         void AddCategoryBinding()
