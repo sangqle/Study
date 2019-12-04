@@ -47,5 +47,23 @@ namespace QuanLyQuanCafe.DAO
 
             return null;
         }
+
+        // Get list account bai 16
+        public List<Account> GetListAccount()
+        {
+            List<Account> list = new List<Account>();
+
+            string query = "select * from account";
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            foreach (DataRow item in data.Rows)
+            {
+                Account acc = new Account(item);
+                list.Add(acc);
+            }
+
+            return list;
+        }
     }
 }

@@ -63,7 +63,7 @@
             this.tbFoodCategory = new System.Windows.Forms.TabPage();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txbCategoryName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
             this.txbCategoryID = new System.Windows.Forms.TextBox();
@@ -84,7 +84,7 @@
             this.txbTableName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txbTableID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel19 = new System.Windows.Forms.Panel();
             this.btnShowTable = new System.Windows.Forms.Button();
@@ -410,6 +410,7 @@
             this.btnShowFood.TabIndex = 3;
             this.btnShowFood.Text = "Xem";
             this.btnShowFood.UseVisualStyleBackColor = true;
+            this.btnShowFood.Click += new System.EventHandler(this.btnShowFood_Click);
             // 
             // btnEditFood
             // 
@@ -478,19 +479,20 @@
             // 
             // panel15
             // 
-            this.panel15.Controls.Add(this.textBox2);
+            this.panel15.Controls.Add(this.txbCategoryName);
             this.panel15.Controls.Add(this.label7);
             this.panel15.Location = new System.Drawing.Point(3, 53);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(279, 44);
             this.panel15.TabIndex = 2;
             // 
-            // textBox2
+            // txbCategoryName
             // 
-            this.textBox2.Location = new System.Drawing.Point(125, 8);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(151, 20);
-            this.textBox2.TabIndex = 1;
+            this.txbCategoryName.Location = new System.Drawing.Point(125, 8);
+            this.txbCategoryName.Name = "txbCategoryName";
+            this.txbCategoryName.Size = new System.Drawing.Size(151, 20);
+            this.txbCategoryName.TabIndex = 1;
+            this.txbCategoryName.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label7
             // 
@@ -548,6 +550,7 @@
             this.btnShowCategory.TabIndex = 3;
             this.btnShowCategory.Text = "Xem";
             this.btnShowCategory.UseVisualStyleBackColor = true;
+            this.btnShowCategory.Click += new System.EventHandler(this.btnShowCategory_Click);
             // 
             // btnEditCategory
             // 
@@ -670,20 +673,21 @@
             // 
             // panel14
             // 
-            this.panel14.Controls.Add(this.textBox3);
+            this.panel14.Controls.Add(this.txbTableID);
             this.panel14.Controls.Add(this.label6);
             this.panel14.Location = new System.Drawing.Point(3, 3);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(279, 44);
             this.panel14.TabIndex = 1;
             // 
-            // textBox3
+            // txbTableID
             // 
-            this.textBox3.Location = new System.Drawing.Point(125, 8);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(151, 20);
-            this.textBox3.TabIndex = 1;
+            this.txbTableID.Location = new System.Drawing.Point(125, 8);
+            this.txbTableID.Name = "txbTableID";
+            this.txbTableID.ReadOnly = true;
+            this.txbTableID.Size = new System.Drawing.Size(151, 20);
+            this.txbTableID.TabIndex = 1;
+            this.txbTableID.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label6
             // 
@@ -714,6 +718,7 @@
             this.btnShowTable.TabIndex = 3;
             this.btnShowTable.Text = "Xem";
             this.btnShowTable.UseVisualStyleBackColor = true;
+            this.btnShowTable.Click += new System.EventHandler(this.btnShowTable_Click);
             // 
             // btnEditTable
             // 
@@ -890,6 +895,7 @@
             this.btnShowAccount.TabIndex = 3;
             this.btnShowAccount.Text = "Xem";
             this.btnShowAccount.UseVisualStyleBackColor = true;
+            this.btnShowAccount.Click += new System.EventHandler(this.btnShowAccount_Click);
             // 
             // btnEditAccount
             // 
@@ -1039,7 +1045,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txbCategoryName;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.TextBox txbCategoryID;
@@ -1059,7 +1065,7 @@
         private System.Windows.Forms.TextBox txbTableName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txbTableID;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Button btnShowTable;
