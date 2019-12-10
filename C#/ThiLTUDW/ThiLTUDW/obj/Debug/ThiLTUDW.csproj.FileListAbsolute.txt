@@ -1,9 +1,0 @@
-C:\Users\student\Desktop\ThiLTUDW\ThiLTUDW\bin\Debug\ThiLTUDW.exe.config
-C:\Users\student\Desktop\ThiLTUDW\ThiLTUDW\bin\Debug\ThiLTUDW.exe
-C:\Users\student\Desktop\ThiLTUDW\ThiLTUDW\bin\Debug\ThiLTUDW.pdb
-C:\Users\student\Desktop\ThiLTUDW\ThiLTUDW\obj\Debug\ThiLTUDW.csprojResolveAssemblyReference.cache
-C:\Users\student\Desktop\ThiLTUDW\ThiLTUDW\obj\Debug\ThiLTUDW.Form1.resources
-C:\Users\student\Desktop\ThiLTUDW\ThiLTUDW\obj\Debug\ThiLTUDW.Properties.Resources.resources
-C:\Users\student\Desktop\ThiLTUDW\ThiLTUDW\obj\Debug\ThiLTUDW.csproj.GenerateResource.Cache
-C:\Users\student\Desktop\ThiLTUDW\ThiLTUDW\obj\Debug\ThiLTUDW.exe
-C:\Users\student\Desktop\ThiLTUDW\ThiLTUDW\obj\Debug\ThiLTUDW.pdb
