@@ -1,0 +1,1 @@
+print("hello python fron my text editor")
