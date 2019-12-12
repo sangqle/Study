@@ -5,11 +5,25 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . scode --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Scode\"",
+    "package-linux": "electron-packager . scode --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/icon.png --prune=true --out=release-builds"
   },
   "author": "Sang Lequang",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^7.1.4"
+    "electron": "^7.1.4",
+    "electron-devtools-installer": "^2.2.4",
+    "electron-packager": "^14.1.1",
+    "typescript": "^3.7.3",
+    "typings": "^2.1.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.3",
+    "css-modules-require-hook": "^4.2.3",
+    "moment": "^2.24.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   }
 }
