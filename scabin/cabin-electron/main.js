@@ -1,11 +1,10 @@
-const { app, BrowserWindow, Menu, globalShortcut } = require("electron");
+const { app, BrowserWindow, Menu, globalShortcut, shell } = require("electron");
 const fs = require("fs");
 
 const url = require("url");
 const path = require("path");
 const ipc = require("electron").ipcMain;
-// Keep a global reference of the window object, if you don't, the window will
-// be closed automatically when the JavaScript object is garbage collected.
+
 let mainWindow;
 
 function createWindow() {
@@ -13,8 +12,6 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     title: "Scode",
     icon: "./assets/icons/png/icon.png",
-    width: 1000,
-    height: 600,
     webPreferences: {
       nodeIntegration: true
     }
@@ -42,10 +39,6 @@ function createWindow() {
   }); */
 }
 
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-// Some APIs can only be used after this event occurs.
-
 app.on("ready", createWindow);
 
 const mainMenuTemplate = [
@@ -63,6 +56,8 @@ const mainMenuTemplate = [
         label: "Save",
         accelerator: process.platform == "darwin" ? "Command+S" : "Ctrl+S",
         click() {
+          const fullPath = app.getAppPath();
+          shell.showItemInFolder(fullPath);
           mainWindow.webContents.send("save", {
             SAVED: "save file"
           });
