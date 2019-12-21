@@ -1,10 +1,20 @@
 const { BrowserWindow, Menu, app, shell, dialog } = require("electron");
+const electron = require("electron");
+const { ipcMain } = require("electron");
+const path = require("path");
+const url = require("url");
+const loadWorkSpace = require("../work-space/workspace");
+const fs = require("fs");
 const mainMenuTemplate = [
   {
     label: "File",
     submenu: [
       {
-        label: "New Window"
+        label: "New File",
+        accelerator: process.platform == "darwin" ? "Command+N" : "Ctrl+N",
+        click: (item, focusedWindow) => {
+          focusedWindow.webContents.send("new-file", "create");
+        }
       },
       {
         label: "Open File",
@@ -13,7 +23,18 @@ const mainMenuTemplate = [
       {
         label: "Save",
         accelerator: process.platform == "darwin" ? "Command+S" : "Ctrl+S",
-        click() {}
+        click(item, focusedWindow) {
+          focusedWindow.webContents.send("save-file", "save");
+          ipcMain.on("file-saved", (event, args) => {
+            console.log(args);
+            try {
+              fs.writeFileSync("myfile.js", args.text, "utf-8");
+              console.log("Saved");
+            } catch (e) {
+              console.log("Failed to save the file !");
+            }
+          });
+        }
       },
       {
         label: "Save As..."
@@ -49,7 +70,23 @@ const mainMenuTemplate = [
     label: "Help"
   }
 ];
-
+if (process.env.NODE_ENV != "production") {
+  mainMenuTemplate.push({
+    label: "Developer Tool",
+    submenu: [
+      {
+        label: "Toggle DevTools",
+        accelerator: process.platform == "darwin" ? "Command+I" : "Ctrl+I",
+        click(item, focusedWindow) {
+          focusedWindow.toggleDevTools();
+        }
+      },
+      {
+        role: "reload"
+      }
+    ]
+  });
+}
 function findReopenMenuItem() {
   const menu = Menu.getApplicationMenu();
   if (!menu) return;

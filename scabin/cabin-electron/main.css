@@ -1,0 +1,18 @@
+body {
+  background-color: gray;
+}
+.container {
+  display: flex;
+}
+
+.navbar {
+  background-color: rosybrown;
+  width: 25%;
+  height: 95vh;
+}
+
+#editor {
+  background-color: royalblue;
+  width: 75%;
+  height: auto;
+}
