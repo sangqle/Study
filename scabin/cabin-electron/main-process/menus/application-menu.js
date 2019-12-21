@@ -24,12 +24,14 @@ const mainMenuTemplate = [
         label: "Save",
         accelerator: process.platform == "darwin" ? "Command+S" : "Ctrl+S",
         click(item, focusedWindow) {
+          let i = 0;
           focusedWindow.webContents.send("save-file", "save");
           ipcMain.on("file-saved", (event, args) => {
             console.log(args);
             try {
               fs.writeFileSync("myfile.js", args.text, "utf-8");
               console.log("Saved");
+              console.log("i = ", i++);
             } catch (e) {
               console.log("Failed to save the file !");
             }
