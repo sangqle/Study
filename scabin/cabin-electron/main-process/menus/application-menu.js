@@ -66,12 +66,21 @@ const mainMenuTemplate = [
 ipcMain.on("file-saved", (event, args) => {
   console.log(args);
   try {
-    fs.writeFileSync("myfile.js", args.text, "utf-8");
-    console.log("Saved");
+    let filePath;
+    if (!args.filePath) {
+      filePath = dialog.showSaveDialogSync(args.win);
+    } else {
+      filePath = args.filePath;
+    }
+    fs.writeFileSync(filePath, args.text, "utf-8");
+    const arrFilePath = filePath.split("/");
+    event.returnValue = {
+      filePath,
+      fileName: arrFilePath[arrFilePath.length - 1]
+    };
   } catch (e) {
     console.log("Failed to save the file !");
   }
-  event.returnValue = "pong";
 });
 
 if (process.env.NODE_ENV != "production") {
