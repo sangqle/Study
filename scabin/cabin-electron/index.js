@@ -19,10 +19,9 @@ ipcRenderer.on("new-file", (event, args) => {
 
 ipcRenderer.on("save-file", (event, args) => {
   if (args) {
+    console.log(args);
     const textInEditor = document.getElementById("text-editor");
     const textArea = document.getElementById("textArea");
-
-    console.log(textInEditor.value);
-    ipcRenderer.send("file-saved", { text: textArea.value });
+    ipcRenderer.sendSync("file-saved", { text: textArea.value });
   }
 });

@@ -26,16 +26,6 @@ const mainMenuTemplate = [
         click(item, focusedWindow) {
           let i = 0;
           focusedWindow.webContents.send("save-file", "save");
-          ipcMain.on("file-saved", (event, args) => {
-            console.log(args);
-            try {
-              fs.writeFileSync("myfile.js", args.text, "utf-8");
-              console.log("Saved");
-              console.log("i = ", i++);
-            } catch (e) {
-              console.log("Failed to save the file !");
-            }
-          });
         }
       },
       {
@@ -72,6 +62,18 @@ const mainMenuTemplate = [
     label: "Help"
   }
 ];
+
+ipcMain.on("file-saved", (event, args) => {
+  console.log(args);
+  try {
+    fs.writeFileSync("myfile.js", args.text, "utf-8");
+    console.log("Saved");
+  } catch (e) {
+    console.log("Failed to save the file !");
+  }
+  event.returnValue = "pong";
+});
+
 if (process.env.NODE_ENV != "production") {
   mainMenuTemplate.push({
     label: "Developer Tool",
