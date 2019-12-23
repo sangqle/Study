@@ -5,16 +5,14 @@ function swap(i1, i2, array) {
 }
 
 function selectionSort(array) {
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length - 1; i++) {
     let iMin = i;
-    let vMin = array[i];
     for (let j = i + 1; j < array.length; j++) {
-      if (array[j] < vMin) {
-        vMin = array[j];
+      if (array[j] < array[iMin]) {
         iMin = j;
+        swap(iMin, i, array);
       }
     }
-    swap(iMin, i, array);
   }
   return array;
 }
