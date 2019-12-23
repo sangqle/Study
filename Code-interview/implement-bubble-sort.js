@@ -6,9 +6,16 @@ function swap(i1, i2, array) {
 function bubbleSort(arr) {
   // change code below this line
   let array = [...arr];
-  for (let i = 0; i < array.length; i++) {
-    for (let j = i; j < array.length; j++) {
-      if (array[i] > array[j]) swap(i, j, array);
+  for (let i = array.length - 1; i > 0; i--) {
+    let check = true;
+    for (let j = 0; j < i; j++) {
+      if (array[i] < array[j]) {
+        swap(i, j, array);
+        check = false;
+      }
+    }
+    if (check) {
+      break;
     }
   }
   return array;
