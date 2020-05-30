@@ -24,9 +24,24 @@ int reverse(int x)
     }
     return (int)output;
 }
+int reverse2(int x)
+{
+    int rev = 0;
+    while (x != 0)
+    {
+        int pos = x % 10;
+        x = x / 10;
+        if (rev > INT_MAX / 10 || (rev == INT_MAX / 10) && pos > 7)
+            return 0;
+        if (rev < INT_MIN / 10 || (rev == INT_MIN / 10 && pos < -8))
+            return 0;
+        rev = rev * 10 + pos;
+    }
+    return rev;
+}
 
 int main()
 {
-    int result = reverse(1534236469);
+    int result = reverse2(153);
     cout << result;
 }
