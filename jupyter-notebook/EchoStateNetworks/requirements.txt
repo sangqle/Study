@@ -1,4 +1,4 @@
-jupyterlab==1.1.4
+jupyterlab==1.2.21
   - jinja2 [required: >=2.10, installed: 2.10.3]
     - MarkupSafe [required: >=0.23, installed: 1.1.1]
   - jupyterlab-server [required: ~=1.0.0, installed: 1.0.6]
